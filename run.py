@@ -7,26 +7,11 @@ import pathlib
 import atexit
 import tarfile
 import shutil
+import wandb
 import threading
-from plot import *
 
 client = docker.from_env()
 log = logging.getLogger(__name__)
-def copy_to(src, dst):
-    name, dst = dst.split(':')
-    container = client.containers.get(name)
-    cwd = os.getcwd()
-    os.chdir(os.path.dirname(src))
-    srcname = os.path.basename(src)
-    tar = tarfile.open(src + '.tar', mode='w')
-    try:
-        tar.add(srcname)
-    finally:
-        tar.close()
-
-    data = open(src + '.tar', 'rb').read()
-    container.put_archive(os.path.dirname(dst), data)
-    os.chdir(cwd)
 
 def next_path(path_pattern):
     """
@@ -117,7 +102,6 @@ class ExpConfig():
             name = container_name,
         ) 
         netrc = os.path.join(str(pathlib.Path.home()), ".netrc")
-        # copy_to(netrc, container_name + ":/root")
         dst = os.path.join(self.orig_path, ".netrc")
         if not os.path.exists(dst):
             shutil.copyfile(netrc, dst)
@@ -188,6 +172,8 @@ class ExpConfig():
 
 @hydra.main(config_path="conf", config_name="config")
 def main(cfg):
+    if not os.path.exists(os.path.join(str(pathlib.Path.home()), ".netrc")):
+        wandb.login()
     exp = hydra.utils.instantiate(cfg.exp)
     exp.run_experiment()
 

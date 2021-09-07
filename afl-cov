@@ -284,13 +284,6 @@ def process_afl_test_cases(cargs):
         ### only go once through the loop unless we are in --live mode
         else:
             break
-    global g_line_total
-    global g_line_cov
-    global g_func_total
-    global g_func_cov
-    global g_branch_total
-    global g_branch_cov
-    logr("total functions: {}\ntotal lines: {}\ntotal branches: {}".format(g_line_total, g_func_total, g_branch_total),cov_paths['meta_data'], cargs)
     if tot_files > 0:
         logr("[+] Processed %d / %d test cases.\n" \
                 % (tot_files, len(afl_files)),
@@ -669,6 +662,9 @@ def lcov_gen_coverage(cov_paths, cargs):
     file_name = os.path.basename(g_current_file)
     if g_id == 0:
         g_base_time = int(float(ctime))
+        logr("total functions: {}\ntotal lines: {}\ntotal branches: {}".format(g_line_total, g_func_total, g_branch_total),cov_paths['meta_data'], cargs)
+        wandb.config.func_total=int(g_func_total)
+        wandb.config.line_total=int(g_line_total)
     logr("{} {} {} {} {}".format(
         int(float(ctime)),
         g_line_cov, g_func_cov, g_branch_cov, 
@@ -680,7 +676,7 @@ def lcov_gen_coverage(cov_paths, cargs):
         "time": rel_time,
         "line_cov": int(g_line_cov),
         "func_cov": int(g_func_cov),
-        "branch_cov": int(g_branch_cov),
+        #"branch_cov": int(g_branch_cov),
         "file_id": g_id,
     })
     return

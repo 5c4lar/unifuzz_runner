@@ -50,7 +50,7 @@ class ExpConfig():
         self.output_path = os.path.join(output, target.name, fuzzer.name)   # output_path related to cwd
         self.repeat_times = repeat_times
         self.prefix = os.path.join("/d/p", fuzzer.bin_dir)
-        self.seeds = os.path.join("seeds/general_evaluation", target.seeds)
+        self.seeds = target.seeds
         try: 
             client.get(fuzzer.image)
         except:
@@ -72,7 +72,7 @@ class ExpConfig():
 
     def run_afl_cov(self, output, name):
         container_name = name + "_afl_cov"
-        cmd_temp = "./afl-cov -d {output} --live --coverage-cmd \
+        cmd_temp = "./afl-cov -d {output} --live --lcov-web-all --coverage-cmd \
             \"/d/p/cov/{target} {fuzz_args}\" \
             --code-dir {code_dir} --name {name}"
             

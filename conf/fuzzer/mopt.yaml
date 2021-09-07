@@ -1,0 +1,5 @@
+name: mopt
+bin_dir: "justafl"
+image: "unifuzz/unibench:mopt"
+pacemaker_time: "1"
+cmd_temp: "afl-fuzz -L {pacemaker_time} -i {seeds} -o {output_path} -- {prefix}/{target} {fuzz_args}"

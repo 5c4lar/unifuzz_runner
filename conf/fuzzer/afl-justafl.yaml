@@ -1,0 +1,6 @@
+name: afl-justafl
+bin_dir: "justafl"
+image: "unifuzz/unibench:afl"
+memory_limit: "2G"
+time_limit: "100+"
+cmd_temp: "afl-fuzz -i {seeds} -o {output_path} -m {memory_limit} -t {time_limit} {prefix}/{target} {fuzz_args}"

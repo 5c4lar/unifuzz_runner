@@ -1,0 +1,14 @@
+defaults:
+  - _self_
+  - fuzzer: afl-justafl
+  - target: exiv2
+repeat_times: 30
+output: "output"
+time_interval: 86400 # 24h
+exp:
+  _target_: run.ExpConfig
+  fuzzer: "${fuzzer}"
+  target: ${target}
+  repeat_times: ${repeat_times}
+  output: ${output}
+  time_interval: ${time_interval}

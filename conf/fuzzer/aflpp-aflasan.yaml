@@ -1,0 +1,6 @@
+name: aflpp-aflasan
+bin_dir: "aflasan"
+image: "unifuzz/unibench:afl"
+memory_limit: "none"
+time_limit: "500+"
+cmd_temp: "afl-fuzz -i {seeds} -o {output_path} -m {memory_limit} -t {time_limit} {prefix}/{target} {fuzz_args}"

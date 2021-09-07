@@ -1,0 +1,5 @@
+name: aflfast
+bin_dir: "justafl"
+image: "unifuzz/unibench:aflfast"
+power_schedule: "fast"
+cmd_temp: "afl-fuzz -p {power_schedule} -i {seeds} -o {output_path} -- {prefix}/{target} {fuzz_args}"

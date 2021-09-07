@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Experiment outputs
+
+wandb/
+outputs/
+multirun/
+
+# Token file
+.netrc

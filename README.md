@@ -25,6 +25,8 @@ Driver code for [UNIFUZZ](https://github.com/unifuzz/overview) configured with [
 
 Theoretically all afl-based fuzzers can be suported by addinf a few lines to `config.py`. 
 
+### Todo
+- Add CVE match code.
 ## How to use
 ### Preparation
 ```bash

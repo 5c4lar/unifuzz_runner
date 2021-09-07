@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-import hydra
-import docker
 import os
 import logging
 import pathlib
 import atexit
-import tarfile
 import shutil
-import wandb
 import threading
+import hydra
+import docker
+import wandb
 
 client = docker.from_env()
 log = logging.getLogger(__name__)

@@ -1,0 +1,4 @@
+docker==5.0.2
+docker-pycreds==0.4.0
+hydra-core==1.1.1
+wandb==0.12.1

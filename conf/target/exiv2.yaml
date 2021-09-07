@@ -1,0 +1,4 @@
+name: exiv2
+args: "@@"
+seeds: "seeds/general_evaluation/jpg"
+source_dir: "/unibench/exiv2-0.26"

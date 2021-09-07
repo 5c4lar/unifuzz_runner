@@ -1,0 +1,4 @@
+name: mp3gain
+args: "@@"
+seeds: "seeds/general_evaluation/mp3"
+source_dir: "/unibench/mp3gain-1.5.2"

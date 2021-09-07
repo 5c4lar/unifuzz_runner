@@ -1,0 +1,4 @@
+name: objdump
+args: "-S @@"
+seeds: "seeds/general_evaluation/obj"
+source_dir: "/unibench/binutils-2.28"

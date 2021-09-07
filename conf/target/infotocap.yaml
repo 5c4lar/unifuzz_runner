@@ -1,0 +1,4 @@
+name: infotocap
+args: "-o /dev/null @@"
+seeds: "seeds/general_evaluation/text"
+source_dir: "/unibench/ncurses-6.1"

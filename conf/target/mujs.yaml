@@ -1,0 +1,4 @@
+name: mujs
+args: "@@"
+seeds: "seeds/general_evaluation/mujs"
+source_dir: "/unibench/mujs-1.0.2"

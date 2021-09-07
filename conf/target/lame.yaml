@@ -1,0 +1,4 @@
+name: lame
+args: "@@ /dev/null"
+seeds: "seeds/general_evaluation/lame3.99.5"
+source_dir: "/unibench/lame-3.99.5"

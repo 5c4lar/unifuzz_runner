@@ -1,0 +1,4 @@
+name: pdftotext
+args: "@@ /dev/null"
+seeds: "seeds/general_evaluation/pdf"
+source_dir: "/unibench/xpdf-4.00"

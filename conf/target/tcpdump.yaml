@@ -1,0 +1,4 @@
+name: tcpdump
+args: "-e -vv -nr @@"
+seeds: "seeds/general_evaluation/tcpdump100"
+source_dir: "/unibench/tcpdump-4.8.1"

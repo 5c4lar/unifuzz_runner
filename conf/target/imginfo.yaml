@@ -1,0 +1,4 @@
+name: imginfo
+args: "-f @@"
+seeds: "seeds/general_evaluation/imginfo"
+source_dir: "/unibench/jasper-2.0.12"

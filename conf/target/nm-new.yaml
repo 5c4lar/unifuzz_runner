@@ -1,0 +1,4 @@
+name: nm-new
+args: "-A -a -l -S -s --special-syms --synthetic --with-symbol-versions -D @@"
+seeds: "seeds/general_evaluation/nm"
+source_dir: "/unibench/binutils-5279478"

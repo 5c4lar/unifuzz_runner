@@ -1,0 +1,4 @@
+name: sqlite3
+args: " < @@"
+seeds: "seeds/general_evaluation/sql"
+source_dir: "/unibench/SQLite-3.8.9"

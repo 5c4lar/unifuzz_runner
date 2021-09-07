@@ -1,0 +1,4 @@
+name: jq
+args: ". @@"
+seeds: "seeds/general_evaluation/json"
+source_dir: "/unibench/jq-1.5"

@@ -1,0 +1,4 @@
+name: jhead
+args: "@@"
+seeds: "seeds/general_evaluation/jhead"
+source_dir: "/unibench/jhead-3.00"

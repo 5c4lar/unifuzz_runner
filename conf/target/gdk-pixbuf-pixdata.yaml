@@ -1,0 +1,4 @@
+name: gdk-pixbuf-pixdata
+args: "@@ /dev/null"
+seeds: "seeds/general_evaluation/pixbuf"
+source_dir: "/unibench/gdk-pixbuf-2.31.1"

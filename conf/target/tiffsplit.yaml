@@ -1,0 +1,4 @@
+name: tiffsplit
+args: "@@"
+seeds: "seeds/general_evaluation/tiff"
+source_dir: "/unibench/libtiff-3.9.7"

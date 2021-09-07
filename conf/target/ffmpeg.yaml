@@ -1,0 +1,4 @@
+name: ffmpeg
+args: "-y -i @@ -c:v mpeg4 -c:a copy -f mp4 /dev/null"
+seeds: "seeds/general_evaluation/ffmpeg100"
+source_dir: "/unibench/ffmpeg-4.0.1"

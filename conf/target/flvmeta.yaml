@@ -1,0 +1,4 @@
+name: flvmeta
+args: "@@"
+seeds: "seeds/general_evaluation/flv"
+source_dir: "/unibench/flvmeta-1.2.1"

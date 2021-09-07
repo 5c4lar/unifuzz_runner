@@ -1,0 +1,4 @@
+name: cflow
+args: "@@"
+seeds: "seeds/general_evaluation/cflow"
+source_dir: "/unibench/cflow-1.6"

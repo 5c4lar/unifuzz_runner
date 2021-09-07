@@ -1,0 +1,3 @@
+[submodule "seeds"]
+	path = seeds
+	url = https://github.com/unifuzz/seeds.git
